@@ -1,0 +1,15 @@
+package joption;
+
+import javax.swing.JOptionPane;
+
+public class cadastroNome {
+
+	public static void main(String[] args) {
+		
+		String nome = JOptionPane.showInputDialog("Qual seu nome?");
+		
+		String mensagem = "Nome: " + nome;
+		JOptionPane.showMessageDialog(null, mensagem);
+	}
+
+}
