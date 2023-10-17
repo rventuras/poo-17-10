@@ -1,0 +1,32 @@
+package joption;
+
+import javax.swing.JOptionPane;
+
+public class ex4 {
+
+	public static void main(String[] args) {
+		String nome = JOptionPane.showInputDialog("Insira seu nome: ");
+		String tel = JOptionPane.showInputDialog("Insira seu telefone: ");
+		String curso = JOptionPane.showInputDialog("Insira o nome do seu curso: ");
+		int n1 = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o valor da primeira prova (0 até 60): "));
+		
+		int n2 = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o valor da segunda prova (0 até 40): "));
+		int np =Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o valor da prova escrita (0 até 60): "));
+		int nf = (n1 + n2)/2;
+		int nt = nf + np;
+		
+		if (nt >= 75) {
+			JOptionPane.showMessageDialog(null, "Candidato: " + nome + "\nTelefone: " + tel + "\nCurso: " + curso + "\nAprovado" + "\nNota Final: " + nt);
+			
+		}else {
+			
+			JOptionPane.showMessageDialog(null, "Canditado: " + nome + "\nTelefone: " + tel + "\nCurso: " + curso + "\nReprovado" + "\nNota Final: " + nt);
+			
+			
+			
+			
+		}
+		
+	}
+
+}
