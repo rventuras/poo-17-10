@@ -5,15 +5,26 @@ import javax.swing.JOptionPane;
 public class ex4 {
 
 	public static void main(String[] args) {
+		
+		
 		String nome = JOptionPane.showInputDialog("Insira seu nome: ");
 		String tel = JOptionPane.showInputDialog("Insira seu telefone: ");
-		String curso = JOptionPane.showInputDialog("Insira o nome do seu curso: ");
-		int n1 = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o valor da primeira prova (0 até 60): "));
-		
-		int n2 = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o valor da segunda prova (0 até 40): "));
-		int np =Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o valor da prova escrita (0 até 60): "));
-		int nf = (n1 + n2)/2;
-		int nt = nf + np;
+		String curso = JOptionPane.showInputDialog("Insira o nome do seu concurso: ");
+		double n1 = Double.parseDouble(JOptionPane.showInputDialog(null, "Digite o valor da primeira prova (0 até 60): "));
+		if(n1 > 60 || n1<0) {
+			JOptionPane.showMessageDialog(null, "Valor Invalido!");
+			
+		 System.exit(0);
+		}
+		double n2 = Double.parseDouble(JOptionPane.showInputDialog(null, "Digite o valor da segunda prova (0 até 40): "));
+		if(n2 > 40 || n2<0) {
+			JOptionPane.showMessageDialog(null, "Valor Invalido!");
+			
+		 System.exit(0);
+		}
+		double np = Double.parseDouble(JOptionPane.showInputDialog(null, "Digite o valor da prova escrita (0 até 60): "));
+		double nf = (n1 + n2)/2;
+		double nt = nf + np;
 		
 		if (nt >= 75) {
 			JOptionPane.showMessageDialog(null, "Candidato: " + nome + "\nTelefone: " + tel + "\nCurso: " + curso + "\nAprovado" + "\nNota Final: " + nt);
